@@ -4,6 +4,9 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-  "remoteUser": "root",
+  "remoteUser": "node",
+  "mounts": [
+	"source=/Users/ryoya/.ssh,target=/home/node/.ssh,type=bind"
+],
   "privileged": true
 }
