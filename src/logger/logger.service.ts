@@ -7,7 +7,7 @@ export class MyLoggerService implements LoggerService {
     logger: Logger;
 
     constructor() {
-        const infoLogTransport = new DailyRotateFile({level:"info",filename:"error-%DATE%.log",dirname:"logs/info",datePattern:"YYYYMMDD",maxFiles:"7d"})
+        const infoLogTransport = new DailyRotateFile({level:"error",filename:"error-%DATE%.log",dirname:"logs/info",datePattern:"YYYYMMDD",maxFiles:"7d"})
 
         this.logger = createLogger({
             format: format.combine(format.timestamp(), format.json()),
